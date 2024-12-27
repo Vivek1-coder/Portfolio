@@ -1,0 +1,24 @@
+.skill-bar {
+    margin-bottom: 20px;
+  }
+  
+  .skill-bar__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .skill-bar__track {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 15px;
+  }
+  
+  .skill-bar__fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.5s ease-in-out;
+  }
+  
