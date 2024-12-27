@@ -1,6 +1,7 @@
 import React from 'react'
 import boy from '../assets/images/boy.jpg'
 import Typewriter from '../components/TypingAnimation/Typewriter'
+import Social from '../components/Social/Social.jsx'
 
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
   Pop up
@@ -22,6 +23,9 @@ const Home = () => {
             <p>
             A skilled and confident newbie in software world having experience in full-stack development, specializing in Python, JavaScript, and cloud technologies.
             </p>
+        </div>
+        <div>
+          <Social/>
         </div>
 
         </div>
