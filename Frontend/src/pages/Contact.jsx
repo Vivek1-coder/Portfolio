@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import help from '../assets/images/help.png'
 import Social from '../components/Social/Social';
+import emailjs from '@emailjs/browser';
+
 const Contact = () => {
     const newform = {
         name : "",
@@ -10,6 +12,17 @@ const Contact = () => {
     }
   const [formData, setFormData] = useState(newform);
     const [buttonText,SetButtonText] = useState('Send')
+    const serviceId = "service_ixciwxc";
+    const templateId = "template_3m3p2vh";
+    const publicKey = "zQvVBktxQBgVK3oOM";
+
+    const templateParams = {
+        name : formData.name,
+        phone : formData.phone,
+        email : formData.email,
+        message : formData.message
+    };
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -17,20 +30,15 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         SetButtonText("Sending...")
-        const response = await fetch("http://localhost:5000/api/send-email", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-        });
-        if (response.ok) {
-            alert("Message sent!");
-            SetButtonText("Send")
+        emailjs.send(serviceId,templateId,templateParams,publicKey)
+        .then((response) => {
+            console.log("Email sent successfully",response);
             setFormData(newform)
-        
-        } else {
-            alert("Failed to send the message.");
             SetButtonText("Send")
-        }
+        })
+        .catch((error)=>{
+            console.log(error)
+        });
     };
 
     return (
