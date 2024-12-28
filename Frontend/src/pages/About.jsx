@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Skillbar from "../components/Skillbar/Skillbar.jsx";
-import Row from "../components/Row/Row.jsx";
+import axios from "axios";
 import HoverableTable from "../components/Table/Table.jsx";
 const skills = [
   {
@@ -61,6 +61,34 @@ const skills = [
 ];
 
 const About = () => {
+  const [leetcodeRatings,setLeetcodeRatings] = useState("")
+  const [leetcodeAttended,setLeetcodeAttended] = useState("")
+  const [codeforcesRatings,setcodeforcesRatings] = useState("")
+  const [codeforcesAttended,setcodeforcesAttended] = useState("")
+
+  useEffect(()=>{
+    axios.get('/api/user.rating?handle=Vivek1-coder')
+    .then(async(response)=>{
+      const index = await response.data.result.length
+      await setcodeforcesRatings(response.data.result[index-1].newRating)
+      setcodeforcesAttended(index)
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+  })
+
+  useEffect(()=>{
+    axios.get('/userContestRankingInfo/vivek1_coder')
+    .then(async(response)=>{
+      await setLeetcodeAttended(response.data.data.userContestRanking.attendedContestsCount)
+      await setLeetcodeRatings(response.data.data.userContestRanking.rating)
+      console.log(response.data.data.userContestRanking)
+      console.log(leetcodeRatings,leetcodeAttended)
+    })
+  })
+
+
   return (
     <div>
       <section className="w-full h-screen relative bg-black text-white flex justify-center items-center">
@@ -75,22 +103,22 @@ const About = () => {
                 <li className="btn">CodeForces</li>
                 <li className=" flex gap-3 ">
                   <p>Ratings : </p>
-                  <p>--</p>
+                  <p>{codeforcesRatings || "--"}</p>
                 </li>
                 <li className="flex gap-3">
                   <p>Attended : </p>
-                  <p>--</p>
+                  <p>{codeforcesAttended || '--'}</p>
                 </li>
               </ul>
               <ul className="flex flex-col gap-3" >
                 <li className="btn">Leetcode</li>
                 <li className="flex gap-3">
                   <p>Ratings : </p>
-                  <p>--</p>
+                  <p>{leetcodeRatings || "--"}</p>
                 </li>
                 <li className="flex gap-3">
                   <p>Attended : </p>
-                  <p>--</p>
+                  <p>{leetcodeAttended || "--"}</p>
                 </li>
               </ul>
              </div>
