@@ -10,11 +10,12 @@
   .hoverable-table td {
     padding: 10px;
     text-align: left;
+    background-color: #10101022;
     border: 1px solid #444;
   }
   
   .hoverable-table th {
-    background-color: #212529;
+    background-color: #232727;
     
   }
   

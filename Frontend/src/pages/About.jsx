@@ -1,7 +1,10 @@
 import React, { useState,useEffect } from "react";
 import Skillbar from "../components/Skillbar/Skillbar.jsx";
 import axios from "axios";
+import back from '../assets/images/about.jpg'
 import HoverableTable from "../components/Table/Table.jsx";
+
+
 const skills = [
   {
     id: 1,
@@ -90,57 +93,74 @@ const About = () => {
 
 
   return (
-    <div>
-      <section className="w-full h-screen relative bg-black text-white flex justify-center items-center">
-        <div className="h-4/5 w-4/5 flex flex-col">
-          <div className="h-3/5  flex">
-            <div className="w-1/2 flex flex-col justify-center items-center p-3">
-              <HoverableTable/>
-            </div>
-            <div className="w-1/2  flex justify-center items-center rounded-xl ">
-             <div className="w-1/2 h-72 p-3 flex  items-center  flex-col text-center gap-5 rounded-xl shadow-md shadow-slate-500">
-             <ul className="flex flex-col gap-3" >
-                <li className="btn">CodeForces</li>
-                <li className=" flex gap-3 ">
-                  <p>Ratings : </p>
-                  <p>{codeforcesRatings || "--"}</p>
-                </li>
-                <li className="flex gap-3">
-                  <p>Attended : </p>
-                  <p>{codeforcesAttended || '--'}</p>
-                </li>
-              </ul>
-              <ul className="flex flex-col gap-3" >
-                <li className="btn">Leetcode</li>
-                <li className="flex gap-3">
-                  <p>Ratings : </p>
-                  <p>{leetcodeRatings || "--"}</p>
-                </li>
-                <li className="flex gap-3">
-                  <p>Attended : </p>
-                  <p>{leetcodeAttended || "--"}</p>
-                </li>
-              </ul>
-             </div>
-              
-            </div>
-          </div>
-          <div className="h-2/5 flex justify-center items-center shadow-md shadow-slate-500 rounded-2xl  m-6 p-3">
-          <p className="font-bold text-xl">Skills: </p>
-          <div className="flex flex-wrap  gap-3 justify-center items-center p-10  overflow-y-auto ">
-            {skills.map((skill) => (
-              <Skillbar
-                key={skill.id}
-                skill={skill.skill}
-                percentage={skill.percentage}
-              />
-            ))}
-          </div>
-          </div>
-          
+<div
+  className="w-full h-screen relative "
+  
+>
+<div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: `url(${back})`, // Replace with your image
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      opacity: 0.2, // Decrease image opacity
+      zIndex: -0.2, // Ensure it stays behind the content
+    }}
+  ></div>
+  <section className="w-full h-screen relative text-white flex justify-center items-center">
+    <div className="h-4/5 w-4/5 flex flex-col">
+      <div className="h-3/5 flex">
+        <div className="w-1/2 flex flex-col justify-center items-center p-3 text-yellow-500">
+          <HoverableTable />
         </div>
-      </section>
+        <div className="w-1/2 flex justify-center items-center rounded-xl">
+          <div className="w-1/2 h-72 p-3 flex items-center flex-col text-center gap-5 rounded-xl shadow-md shadow-slate-500">
+            <ul className="flex flex-col gap-3">
+              <a href="https://codeforces.com/profile/Vivek1-coder">
+                <li className="btn">CodeForces</li>
+              </a>
+              <li className="flex gap-3">
+                <p>Ratings : </p>
+                <p>{codeforcesRatings || "--"}</p>
+              </li>
+              <li className="flex gap-3">
+                <p>Attended : </p>
+                <p>{codeforcesAttended || '--'}</p>
+              </li>
+            </ul>
+            <ul className="flex flex-col gap-3">
+              <a href="https://leetcode.com/u/vivek1_coder/">
+                <li className="btn">Leetcode</li>
+              </a>
+              <li className="flex gap-3">
+                <p>Ratings : </p>
+                <p>{leetcodeRatings || "--"}</p>
+              </li>
+              <li className="flex gap-3">
+                <p>Attended : </p>
+                <p>{leetcodeAttended || "--"}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="h-2/5 flex justify-center items-center shadow-md shadow-slate-500 rounded-2xl m-6 p-3">
+        <p className="font-bold text-xl">Skills: </p>
+        <div className="flex flex-wrap gap-3 justify-center items-center p-10 overflow-y-auto">
+          {skills.map((skill) => (
+            <Skillbar
+              key={skill.id}
+              skill={skill.skill}
+              percentage={skill.percentage}
+            />
+          ))}
+        </div>
+      </div>
     </div>
+  </section>
+</div>
+
   );
 };
 
