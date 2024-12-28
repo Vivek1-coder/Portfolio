@@ -7,7 +7,6 @@ const SkillBar = ({ skill, percentage }) => {
     <div className="skill-bar">
       <div className="skill-bar__info">
         <span className="skill-bar__name">{skill}</span>
-        <span className="skill-bar__percentage">{percentage}%</span>
       </div>
       <div className="skill-bar__track">
         <div

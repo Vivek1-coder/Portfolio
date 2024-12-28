@@ -1,0 +1,25 @@
+.hoverable-table {
+    width: 100%;
+    border-collapse: collapse;
+   
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hoverable-table th,
+  .hoverable-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+  }
+  
+  .hoverable-table th {
+    background-color: #212529;
+    
+  }
+  
+  .hoverable-table tr:hover {
+    background-color: #495057;
+    cursor: pointer;
+  }
+  
