@@ -29,7 +29,7 @@ const projects = [
     id : 3,
     img : proj_3,
     link : 'https://github.com/Vivek1-coder/HospitalBedSlotManagement',
-    name : 'Hospital Bed manager',
+    name : 'Hospital Manager',
     desc : 'A website to manage beds of hospitals in a city'
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     img : proj_6,
     link : 'https://github.com/Vivek1-coder/SpotifyClone',
     name : 'Music',
-    desc : 'A music playing webpage'
+    desc : 'A music playing webpage inspired from Spotify'
   },
   {
     id : 7,
