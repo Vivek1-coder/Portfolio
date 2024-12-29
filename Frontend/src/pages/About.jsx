@@ -69,27 +69,42 @@ const About = () => {
   const [codeforcesAttended, setcodeforcesAttended] = useState("");
 
   useEffect(() => {
-    axios
-      .get("https://codeforces.com/api/user.rating?handle=Vivek1-coder")
-      .then( (response) => {
-        const index = response.data.result.length;
-         setcodeforcesRatings(response.data.result[index - 1].newRating);
+    fetch("https://codeforces.com/api/user.rating?handle=Vivek1-coder")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const index = data.result.length;
+        setcodeforcesRatings(data.result[index - 1].newRating);
         setcodeforcesAttended(index);
       })
       .catch((error) => {
-        console.log(error);
+        console.error("Error fetching Codeforces data:", error);
       });
-  });
-
+  }, []);
+  
   useEffect(() => {
-    axios.get("https://alfa-leetcode-api.onrender.com/userContestRankingInfo/vivek1_coder").then( (response) => {
-       setLeetcodeAttended(
-        response.data.data.userContestRanking.attendedContestsCount
-      );
-       setLeetcodeRatings(response.data.data.userContestRanking.rating);
-      
-    });
-  });
+    fetch("https://alfa-leetcode-api.onrender.com/userContestRankingInfo/vivek1_coder")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setLeetcodeAttended(
+          data.data.userContestRanking.attendedContestsCount
+        );
+        setLeetcodeRatings(data.data.userContestRanking.rating);
+      })
+      .catch((error) => {
+        console.error("Error fetching LeetCode data:", error);
+      });
+  }, []);
+  
 
   return (
     <div className="w-full h-screen relative object-contain">
