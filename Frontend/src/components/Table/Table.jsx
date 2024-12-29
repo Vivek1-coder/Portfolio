@@ -14,7 +14,7 @@ const HoverableTable = () => {
 
   return (
     <div style={{ padding: "20px", maxWidth: "800px" }}>
-      <table className="hoverable-table shadow-md shadow-slate-500 rounded-xl overflow-hidden ">
+      <table className="hoverable-table shadow-md shadow-slate-500 rounded-xl overflow-hidden background">
         <thead>
             <tr>
                
