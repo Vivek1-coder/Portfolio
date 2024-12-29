@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <section className='w-full h-screen relative bg-black text-white'>
         {/* Text Section */}
-        <div className='absolute left-0 top-1/4 h-1/2 w-1/2 flex flex-col justify-center items-center text-center gap-4 p-10'>
+        <div className='absolute md:left-0 top-1/4 h-1/2 w-full md:w-1/2 flex flex-col justify-center items-center text-center gap-4 p-10 z-10'>
         <div className='flex flex-col gap-2'>
           <p className='font-bold text-xl'>Hii I'm</p>
           <p className='font-bold text-4xl'>Vivek</p>
@@ -19,7 +19,7 @@ const Home = () => {
           
         </div>
 
-        <div className='text-white w-3/4  bg-slate-700 h-auto text-center justify-center rounded-xl p-6'>
+        <div className='text-white w-full md:w-3/4 background2 md:bg-slate-700 h-auto text-center justify-center rounded-xl p-6'>
             <p>
             A skilled and confident newbie in software world having experience in full-stack development, specializing in Python, JavaScript, and cloud technologies.
             </p>
@@ -29,11 +29,11 @@ const Home = () => {
         </div>
 
         </div>
-         <div className='absolute bottom-0 right-0 w-1/2 '>
+         <div className='absolute top-0 right-0 w-screen md:w-1/2 h-screen '>
             <img 
                 src={boy} 
                 alt="boy" 
-                className="w-full h-full object-contain"
+                className="w-full h-full md:object-contain"
             />
         </div>
       </section>

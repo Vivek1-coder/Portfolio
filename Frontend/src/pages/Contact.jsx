@@ -44,14 +44,14 @@ const Contact = () => {
     return (
 
       <section className='w-full h-screen relative bg-black text-white' >
-        <div className='w-full h-full flex  justify-center items-center gap-5 flex-col '>
-            <div className='w-1/2 h-1/2 flex rounded-xl shadow-lg shadow-slate-500'>
-            <div className='h-fit w-1/2'>
+        <div className='w-full h-full flex  justify-center items-center gap-5 flex-col object-contain '>
+            <div className='w-5/6 h-1/2 lg:w-1/2 lg:h-1/2 flex rounded-xl max-lg:justify-center sm:shadow-lg sm:shadow-slate-500 '>
+            <div className='lg:h-fit lg:w-1/2 max-lg:hidden'>
                 <img src={help} alt="" />
             </div>
-            <div className='flex w-1/2 h-full justfy-center items-center'>
-            <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
-                <div className='flex h-8 justify-between gap-3'>
+            <div className='flex w-fit lg:w-1/2 h-full justfy-center items-center '>
+            <form className='flex flex-col gap-4 ' onSubmit={handleSubmit}>
+                <div className='flex h-8  justify-between gap-3'>
                     <label className='text-xl font-bold'>Name :</label>
                     <input className='text-black text-center rounded-lg'
                         type="text"
@@ -73,7 +73,7 @@ const Contact = () => {
                         required
                     />
                 </div>
-                <div className='flex h-8 justify-between gap-3'>
+                <div className='flex h-8  justify-between gap-3'>
                 <label className='text-xl font-bold'>Email :</label>
                     <input className='text-black text-center rounded-lg'
                         type="email"
@@ -84,7 +84,7 @@ const Contact = () => {
                         required
                     />
                 </div>
-                <div className='flex h-16 justify-between gap-3'>
+                <div className='flex h-16  justify-between gap-3'>
                 <label className='text-xl font-bold'>Message :</label>
                     <textarea className='text-black  rounded-lg  h-20'
                         type="text"
@@ -95,7 +95,7 @@ const Contact = () => {
                         required
                     />
                 </div>
-                <button type="submit" className='btn m-5'>{buttonText}</button>
+                <button type="submit" className='btn m-5 max-sm:w-64'>{buttonText}</button>
             </form>
             </div>
             

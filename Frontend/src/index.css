@@ -163,6 +163,12 @@ body:has(.card[data-color="green"]:hover) {
   background-color: rgba(226, 216, 216, 0.142);
 }
 
+.background2{
+  background-color: rgba(255, 255, 255, 0.477);
+  color : black;
+  font-weight: 500;
+}
+
 /* Neo Brutalism */
 .neo-brutalism-blue {
   background: #2b77e7;
