@@ -111,7 +111,7 @@ const About = () => {
               <HoverableTable />
             </div>
             <div className="w-full md:w-1/2 flex justify-center items-center rounded-xl">
-              <div className="w-1/2 h-72 p-3 flex items-center flex-col text-center gap-5 rounded-xl shadow-md shadow-slate-500 background">
+              <div className="w-5/6 sm:w-3/4 lg:w-1/2 h-72 p-3 flex items-center flex-col text-center gap-5 rounded-xl shadow-md shadow-slate-500 background">
                 <ul className="flex flex-col gap-3">
                   <a href="https://codeforces.com/profile/Vivek1-coder">
                     <li className="btn">CodeForces</li>
