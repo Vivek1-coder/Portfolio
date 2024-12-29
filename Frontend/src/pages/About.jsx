@@ -70,7 +70,7 @@ const About = () => {
 
   useEffect(() => {
     axios
-      .get("/api/user.rating?handle=Vivek1-coder")
+      .get("https://codeforces.com/api/user.rating?handle=Vivek1-coder")
       .then( (response) => {
         const index = response.data.result.length;
          setcodeforcesRatings(response.data.result[index - 1].newRating);
@@ -82,7 +82,7 @@ const About = () => {
   });
 
   useEffect(() => {
-    axios.get("/userContestRankingInfo/vivek1_coder").then( (response) => {
+    axios.get("https://alfa-leetcode-api.onrender.com/userContestRankingInfo/vivek1_coder").then( (response) => {
        setLeetcodeAttended(
         response.data.data.userContestRanking.attendedContestsCount
       );
