@@ -75,8 +75,8 @@ const Projects = () => {
     <div>
        <section className='w-full h-screen relative bg-black text-white '>
         
-        <div className=' absolute top-24  w-full h-3/4  rounded-3xl flex items-center justify-center '>
-          <div className='w-3/4 h-full flex flex-wrap justify-center items-center p-10 gap-7  rounded-3xl overflow-auto'>
+        <div className=' absolute top-24  w-full h-3/4  rounded-3xl flex items-center justify-center  '>
+          <div className='w-3/4 h-full flex flex-wrap justify-center items-center p-10 gap-7  rounded-3xl overflow-auto '>
           {
             projects.map((project,index)=>(
               <Cards key={project.id} 
@@ -90,7 +90,7 @@ const Projects = () => {
               <a href="https://github.com/Vivek1-coder"><button className='btn'>Click for more projects...</button></a>
           </div>
         </div>
-        <img className='h-full w-full' src={back} alt="" />
+        <img className='h-full w-full' src={back} alt="background" />
         </section>
     </div>
   )

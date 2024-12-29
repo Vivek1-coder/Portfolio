@@ -29,14 +29,7 @@ const Home = () => {
         </div>
 
         </div>
-        
-        
-        
-
-        
-
-        {/* Image Section */}
-        <div className='absolute bottom-0 right-0 w-1/2'>
+         <div className='absolute bottom-0 right-0 w-1/2 '>
             <img 
                 src={boy} 
                 alt="boy" 
