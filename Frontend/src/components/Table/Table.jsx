@@ -8,7 +8,7 @@ const HoverableTable = () => {
     { id: 3, heading: "Experience", details : "Fresher" },
     { id: 4, heading: "Education", details : "B.Tech in Computer Science" },
     { id: 5, heading: "College", details : "Netaji Subhas University of Technology" },
-    { id: 5, heading: "Languages", details : "JavaScript, C++, Python" },
+    { id: 6, heading: "Languages", details : "JavaScript, C++, Python" },
     
   ];
 

@@ -15,7 +15,7 @@ const Home = () => {
         <div className='flex flex-col gap-2'>
           <p className='font-bold text-xl'>Hii I'm</p>
           <p className='font-bold text-4xl'>Vivek</p>
-          <p className='font-bold text-2xl'><Typewriter words={['FullStack Developer','ML Engineer']}/></p>
+          <div className='font-bold text-2xl'><Typewriter words={['FullStack Developer','ML Engineer']}/></div>
           
         </div>
 

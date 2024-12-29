@@ -56,7 +56,7 @@ const skills = [
     percentage: 40,
   },
   {
-    id: 10,
+    id: 11,
     skill: "Data Structures",
     percentage: 65,
   },
@@ -87,8 +87,7 @@ const About = () => {
         response.data.data.userContestRanking.attendedContestsCount
       );
        setLeetcodeRatings(response.data.data.userContestRanking.rating);
-      console.log(response.data.data.userContestRanking);
-      console.log(leetcodeRatings, leetcodeAttended);
+      
     });
   });
 

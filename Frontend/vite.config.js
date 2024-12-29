@@ -9,7 +9,7 @@ export default defineConfig({
     proxy :{
       '/userContestRankingInfo' : 'https://alfa-leetcode-api.onrender.com',
       '/api' : 'https://codeforces.com',
-      '/api/send-email' : 'https://localhost:5000'
+      
     }
   },
   plugins: [react()],
