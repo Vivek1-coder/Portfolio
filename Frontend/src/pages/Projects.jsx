@@ -6,7 +6,8 @@ import proj_4 from '../assets/images/proj_4.png'
 import proj_5 from '../assets/images/proj_5.jpg'
 import proj_6 from '../assets/images/proj_6.jpg'
 import proj_7 from '../assets/images/proj_7.jpg'
-import proj_8 from '../assets/images/proj_8.jpg'
+import proj_9 from '../assets/images/proj_8.jpg'
+import proj_8 from '../assets/images/proj_9.png'
 import back from '../assets/images/proj_back.jpg'
 import Cards from '../components/Cards/Cards.jsx'
 
@@ -14,8 +15,8 @@ const projects = [
   {
     id : 1,
     img : proj_1,
-    link : 'https://github.com/Vivek1-coder/Blogger',
-    name : 'Blogger',
+    link : 'https://vivek1-coder.github.io/BlogWriter/',
+    name : 'Blogger(Deployed)',
     desc : 'A blogging website made using reactjs and Appwrite services'
   },
   {
@@ -42,8 +43,8 @@ const projects = [
   {
     id : 5,
     img : proj_5,
-    link : 'https://github.com/Vivek1-coder/Todo-using-ContextAPI',
-    name : 'Todo',
+    link : 'https://vivek1-coder.github.io/Todo-using-ContextAPI/',
+    name : 'iTask(Deployed)',
     desc : 'A website to manage your day works'
   },
   {
@@ -63,6 +64,13 @@ const projects = [
   {
     id : 8,
     img : proj_8,
+    link : 'https://vivek1-coder.github.io/Password_generator/',
+    name : 'Password generator(Deployed)',
+    desc : 'Generates random password'
+  },
+  {
+    id : 9,
+    img : proj_9,
     link : 'https://github.com/Vivek1-coder/qrcode',
     name : 'QR generator',
     desc : 'An api to generate qr code'
@@ -75,7 +83,7 @@ const Projects = () => {
     <div>
        <section className='w-full h-screen relative bg-black text-white '>
         
-        <div className=' absolute top-24  w-full h-3/4  rounded-3xl flex items-center justify-center  '>
+        <div className=' absolute top-24  w-full h-3/4  rounded-3xl flex flex-col items-center justify-center  '>
           <div className='w-3/4 h-full flex flex-wrap justify-center items-center p-10 gap-7  rounded-3xl overflow-auto '>
           {
             projects.map((project,index)=>(
@@ -87,8 +95,9 @@ const Projects = () => {
               />
             ))
           }
-              <a href="https://github.com/Vivek1-coder"><button className='btn'>Click for more projects...</button></a>
+              
           </div>
+          <a href="https://github.com/Vivek1-coder" target='_blank'><button className='btn'>Click for more projects...</button></a>
         </div>
         <img className='h-full w-full' src={back} alt="background" />
         </section>

@@ -60,6 +60,18 @@ const skills = [
     skill: "Data Structures",
     percentage: 65,
   },
+  {
+    id:12,
+    skill:"Next.js",
+    percentage:80
+
+  },
+  {
+    id:12,
+    skill:"MongoDB",
+    percentage:40
+
+  },
 ];
 
 const About = () => {
