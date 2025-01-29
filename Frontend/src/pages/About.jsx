@@ -57,7 +57,7 @@ const skills = [
   },
   {
     id: 11,
-    skill: "Data Structures",
+    skill: "DSA",
     percentage: 65,
   },
   {
@@ -99,7 +99,7 @@ const About = () => {
   }, []);
   
   useEffect(() => {
-    fetch("https://alfa-leetcode-api.onrender.com/userContestRankingInfo/vivek1_coder")
+    fetch("https://alfa-leetcode-api.onrender.com/userContestRankingInfo/vivek1coder")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -141,7 +141,7 @@ const About = () => {
               <div className="w-5/6 sm:w-3/4 lg:w-1/2 h-72 p-3 flex items-center flex-col text-center gap-5 rounded-xl shadow-md shadow-slate-500 background">
                 <ul className="flex flex-col gap-3">
                   <a href="https://codeforces.com/profile/Vivek1-coder">
-                    <li className="btn">CodeForces</li>
+                    <li className="btn hover:scale-105">CodeForces</li>
                   </a>
                   <li className="flex gap-3">
                     <p>Ratings : </p>
@@ -153,12 +153,12 @@ const About = () => {
                   </li>
                 </ul>
                 <ul className="flex flex-col gap-3">
-                  <a href="https://leetcode.com/u/vivek1_coder/">
-                    <li className="btn">Leetcode</li>
+                  <a href="https://leetcode.com/u/vivek1coder/">
+                    <li className="btn hover:scale-105">Leetcode</li>
                   </a>
                   <li className="flex gap-3">
                     <p>Ratings : </p>
-                    <p>{leetcodeRatings || "--"}</p>
+                    <p>{Math.ceil(leetcodeRatings) || "--"}</p>
                   </li>
                   <li className="flex gap-3">
                     <p>Attended : </p>
