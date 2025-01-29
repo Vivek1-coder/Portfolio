@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './SkillBar.css'; // Create this CSS file for styling
+import './Skillbar.css'; // Create this CSS file for styling
 
 const SkillBar = ({ skill, percentage }) => {
   return (
