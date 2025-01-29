@@ -113,7 +113,7 @@ const Projects = () => {
           }
               
           </div>
-          <a href="https://github.com/Vivek1-coder" target='_blank'><button className='btn mt-5'>Click for more projects...</button></a>
+          <a href="https://github.com/Vivek1-coder" target='_blank'><button className='btn mt-5 hover:scale-105'>Click for more projects...</button></a>
         </div>
         <img className='h-full w-full' src={back} alt="background" />
         </section>
