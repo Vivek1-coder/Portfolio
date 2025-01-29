@@ -23,13 +23,13 @@
   }
 
   .card {
-    box-shadow: 0 4px 6px rgba(151, 147, 147, 0.436);
+    box-shadow: 1px 5px 6px rgb(170 23 14);;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
   }
   
   .card:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 16px 16px rgba(186, 177, 177, 0.767);
+    box-shadow: 0 16px 16px rgb(197 80 73);
   }
   
