@@ -12,9 +12,9 @@ const Contact = () => {
     }
   const [formData, setFormData] = useState(newform);
     const [buttonText,SetButtonText] = useState('Send')
-    const serviceId = "service_ixciwxc";
-    const templateId = "template_3m3p2vh";
-    const publicKey = "zQvVBktxQBgVK3oOM";
+    const serviceId = process.env.SERVICE_ID;
+    const templateId = process.env.TEMPLATEID;
+    const publicKey = process.env.PUBLICKEY;
 
     const templateParams = {
         name : formData.name,
