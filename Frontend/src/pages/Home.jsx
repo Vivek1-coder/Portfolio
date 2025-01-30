@@ -13,7 +13,7 @@ const Home = () => {
         {/* Text Section */}
         <div className='absolute md:left-0 top-1/4 h-1/2 w-full md:w-1/2 flex flex-col justify-center items-center text-center gap-4 p-10 z-10'>
         <div className='flex flex-col gap-2'>
-          <p className='font-bold text-xl'>Hii I'm</p>
+          <p className='font-bold text-xl'>HII I'm</p>
           <p className='font-bold text-4xl'>Vivek</p>
           <div className='font-bold text-2xl'><Typewriter words={['FullStack Developer','ML Engineer']}/></div>
           
@@ -23,7 +23,9 @@ const Home = () => {
             <p>
             A skilled and confident newbie in software world having experience in full-stack development, specializing in Python, JavaScript, and cloud technologies.
             </p>
+            
         </div>
+        <div><a href="../../public/Vivek_Resume.pdf" target='_blank'><button className='w-60 h-10 m-2 bg-gray-900 bg-opacity-30 hover:scale-105 text-white rounded-xl shadow-md shadow-violet-500'>Download Resume</button></a></div>
         <div>
           <Social/>
         </div>

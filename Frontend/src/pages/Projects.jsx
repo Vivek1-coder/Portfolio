@@ -29,40 +29,42 @@ const projects = [
     desc : 'A blogging website made using reactjs and Appwrite services'
   },
   {
-    id : 2,
+    id:2,
+    img : breathesafe,
+    link :'https://breathesafe.vercel.app/',
+    name : 'Breathe Safe(Deployed)',
+    desc : 'An IOT project to monitor your home aqi and provides suggestion for improving aqi'
+  },
+  {
+    id : 3,
     img : proj_2,
     link : 'https://github.com/Vivek1-coder/Vtube',
     name : 'Vtube',
     desc : 'Backend of a website similar to youTube'
   },
   {
-    id : 3,
+    id : 4,
     img : proj_3,
     link : 'https://github.com/Vivek1-coder/HospitalBedSlotManagement',
     name : 'Hospital Manager',
     desc : 'A website to manage beds of hospitals in a city'
   },
+ 
   {
-    id : 4,
+    id : 5,
     img : proj_4,
     link : 'https://github.com/Vivek1-coder/Breast_Cancer_predictor',
     name : 'Cancer predictor',
     desc : 'A ML model to predict breast cancer at initial stages'
   },
   {
-    id : 5,
+    id : 6,
     img : proj_5,
     link : 'https://vivek1-coder.github.io/Todo-using-ContextAPI/',
     name : 'iTask(Deployed)',
     desc : 'A website to manage your day works'
   },
-  {
-    id:6,
-    img : breathesafe,
-    link :'https://breathesafe.vercel.app/',
-    name : 'Breathe Safe(Deployed)',
-    desc : 'An IOT project to monitor your home aqi and provides suggestion for improving aqi'
-  },
+  
   {
     id : 7,
     img : proj_6,
