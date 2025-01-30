@@ -25,7 +25,7 @@ const Home = () => {
             </p>
             
         </div>
-        <div><a href="../assets/resume/Vivek_Resume.pdf" target='_blank'><button className='w-60 h-10 m-2 bg-gray-900 bg-opacity-30 hover:scale-105 text-white rounded-xl shadow-md shadow-violet-500'>Download Resume</button></a></div>
+        {/* <div><a href="../assets/resume/Vivek_Resume.pdf" target='_blank'><button className='w-60 h-10 m-2 bg-gray-900 bg-opacity-30 hover:scale-105 text-white rounded-xl shadow-md shadow-violet-500'>Download Resume</button></a></div> */}
         <div>
           <Social/>
         </div>
