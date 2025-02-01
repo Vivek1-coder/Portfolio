@@ -1,4 +1,5 @@
 import React from 'react'
+import messaging from '../assets/images/messages.png'
 import xambuddy from '../assets/images/Exambuddy.png'
 import proj_1 from '../assets/images/proj_1.jpeg'
 import proj_2 from '../assets/images/proj_2.jpg'
@@ -22,28 +23,35 @@ const projects = [
     desc : 'A website to manage study materials online'
   },
   {
-    id : 1,
+    id:1,
+    img : messaging,
+    link : 'https://mystrymessaging.vercel.app/',
+    name : 'Mystry Messaging(Deployed)',
+    desc : 'A social website to send messages anonymously'
+  },
+  {
+    id : 2,
     img : proj_1,
     link : 'https://vivek1-coder.github.io/BlogWriter/',
     name : 'Blogger(Deployed)',
     desc : 'A blogging website made using reactjs and Appwrite services'
   },
   {
-    id:2,
+    id:3,
     img : breathesafe,
     link :'https://breathesafe.vercel.app/',
     name : 'Breathe Safe(Deployed)',
     desc : 'An IOT project to monitor your home aqi and provides suggestion for improving aqi'
   },
   {
-    id : 3,
+    id : 4,
     img : proj_2,
     link : 'https://github.com/Vivek1-coder/Vtube',
     name : 'Vtube',
     desc : 'Backend of a website similar to youTube'
   },
   {
-    id : 4,
+    id : 5,
     img : proj_3,
     link : 'https://github.com/Vivek1-coder/HospitalBedSlotManagement',
     name : 'Hospital Manager',
@@ -51,14 +59,14 @@ const projects = [
   },
  
   {
-    id : 5,
+    id : 6,
     img : proj_4,
     link : 'https://github.com/Vivek1-coder/Breast_Cancer_predictor',
     name : 'Cancer predictor',
     desc : 'A ML model to predict breast cancer at initial stages'
   },
   {
-    id : 6,
+    id : 7,
     img : proj_5,
     link : 'https://vivek1-coder.github.io/Todo-using-ContextAPI/',
     name : 'iTask(Deployed)',
@@ -66,28 +74,28 @@ const projects = [
   },
   
   {
-    id : 7,
+    id : 8,
     img : proj_6,
     link : 'https://github.com/Vivek1-coder/SpotifyClone',
     name : 'Music',
     desc : 'A music playing webpage inspired from Spotify'
   },
   {
-    id : 8,
+    id : 9,
     img : proj_7,
     link : 'https://github.com/Vivek1-coder/proj1',
     name : 'Netflix Clone',
     desc : 'Clone of UI of netflix'
   },
   {
-    id : 9,
+    id : 10,
     img : proj_8,
     link : 'https://vivek1-coder.github.io/Password_generator/',
     name : 'Password generator(Deployed)',
     desc : 'Generates random password'
   },
   {
-    id : 10,
+    id : 11,
     img : proj_9,
     link : 'https://github.com/Vivek1-coder/qrcode',
     name : 'QR generator',
