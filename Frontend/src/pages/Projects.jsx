@@ -11,6 +11,8 @@ import proj_6 from '../assets/images/proj_6.jpg'
 import proj_7 from '../assets/images/proj_7.jpg'
 import proj_9 from '../assets/images/proj_8.jpg'
 import proj_8 from '../assets/images/proj_9.png'
+import proj_10 from '../assets/images/proj_10.png'
+import proj_11 from '../assets/images/proj_11.png'
 import back from '../assets/images/proj_back.jpg'
 import Cards from '../components/Cards/Cards.jsx'
 
@@ -24,10 +26,24 @@ const projects = [
   },
   {
     id:1,
+    img : proj_10,
+    link : 'https://www.kaggle.com/code/vivek1coder/fake-news-detection-lstm',
+    name : 'Fake News Detection',
+    desc : 'DL based multimodal model to detect fake news'
+  },
+  {
+    id:11,
     img : messaging,
     link : 'https://mystrymessaging.vercel.app/',
     name : 'Mystry Messaging(Deployed)',
     desc : 'A social website to send messages anonymously'
+  },
+  {
+    id:12,
+    img : proj_11,
+    link : 'https://kavayapath.vercel.app/',
+    name : 'Kavyapath(Deployed)',
+    desc : 'A website to write Hindi poems with many integrated tools to enhance writing and reading experience'
   },
   {
     id : 2,
