@@ -22,7 +22,7 @@ const projects = [
     img : xambuddy,
     link : 'https://xambuddy-ashy.vercel.app/',
     name : 'XAM BUDDY(Deployed)',
-    desc : 'A website to manage study materials online'
+    desc : 'A website to manage online studies'
   },
   {
     id:1,
