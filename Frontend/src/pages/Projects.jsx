@@ -41,7 +41,7 @@ const projects = [
   {
     id:12,
     img : proj_11,
-    link : 'https://kavayapath.vercel.app/',
+    link : 'https://kavyapath.vercel.app/',
     name : 'Kavyapath(Deployed)',
     desc : 'A website to write Hindi poems with many integrated tools to enhance writing and reading experience'
   },
