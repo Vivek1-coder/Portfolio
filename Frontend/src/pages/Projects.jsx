@@ -27,8 +27,8 @@ const projects = [
   {
     id:1,
     img : proj_10,
-    link : 'https://www.kaggle.com/code/vivek1coder/fake-news-detection-lstm',
-    name : 'Fake News Detection',
+    link : 'https://fake-news-detector-app-lstm.streamlit.app/',
+    name : 'Fake News Detection(Deployed)',
     desc : 'DL based multimodal model to detect fake news'
   },
   {
