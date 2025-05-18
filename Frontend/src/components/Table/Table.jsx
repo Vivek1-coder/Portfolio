@@ -4,7 +4,7 @@ import "./Table.css";
 const HoverableTable = () => {
   const data = [
     { id: 1, heading: "Name", details : "Vivek" },
-    { id: 2, heading: "Profile", details : "FullStack Developer" },
+    { id: 2, heading: "Profile", details : "Web Developer, AI-ML Enthusiast" },
     { id: 3, heading: "Experience", details : "Fresher" },
     { id: 4, heading: "Education", details : "B.Tech in Computer Science" },
     { id: 5, heading: "College", details : "Netaji Subhas University of Technology" },

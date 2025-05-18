@@ -13,6 +13,7 @@ import proj_9 from '../assets/images/proj_8.jpg'
 import proj_8 from '../assets/images/proj_9.png'
 import proj_10 from '../assets/images/proj_10.png'
 import proj_11 from '../assets/images/proj_11.png'
+import proj_13 from '../assets/images/fashion_clas.png'
 import back from '../assets/images/proj_back.jpg'
 import Cards from '../components/Cards/Cards.jsx'
 
@@ -29,7 +30,7 @@ const projects = [
     img : proj_10,
     link : 'https://fake-news-detector-app-lstm.streamlit.app/',
     name : 'Fake News Detection(Deployed)',
-    desc : 'DL based multimodal model to detect fake news'
+    desc : 'DL based model to detect fake news'
   },
   {
     id:11,
@@ -44,6 +45,13 @@ const projects = [
     link : 'https://kavyapath.vercel.app/',
     name : 'Kavyapath(Deployed)',
     desc : 'A website to write Hindi poems with many integrated tools to enhance writing and reading experience'
+  },
+  {
+    id : 13,
+    img : proj_13,
+    link : 'https://vivek1-coder-fashion-classification.hf.space/?__theme=system&deep_link=4u04j1FDFhA',
+    name : 'Clothes classifier(Deployed)',
+    desc : 'Classifies different clothes fashion'
   },
   {
     id : 2,
