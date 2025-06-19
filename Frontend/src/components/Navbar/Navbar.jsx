@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
 import logo from "../../assets/images/logo.png";
+import {House} from "lucide-react"
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -21,9 +22,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className='header flex items-center justify-between px-4 py-2'>
+    <header className='header bg-gradient-to-br from-white/50 to-black/30  w-full rounded-full  flex  items-center justify-between px-4 py-2'>
       <NavLink to='/'>
-        <img src={logo} alt='logo' className='w-10 h-10 object-contain' />
+        <House className="h-8 w-8 text-white font-medium"/>
       </NavLink>
       <button
         className={`hamburger ${isMenuOpen ? "open" : ""}`}
