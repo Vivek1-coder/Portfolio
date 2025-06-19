@@ -1,0 +1,33 @@
+.neon-moving-border::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 1rem;
+  background: linear-gradient(45deg, #ff00ff,#00ffff,#ff00ff,#00ffff );
+  background-size: 400% 400%;
+  z-index: -1;
+  filter: blur(6px);
+  animation: fogGlowMove 3s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.neon-moving-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: #0f172a;
+  z-index: -1;
+}
+
+@keyframes fogGlowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
