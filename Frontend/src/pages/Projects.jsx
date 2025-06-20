@@ -13,6 +13,7 @@ import proj_11 from '../assets/images/proj_11.png'
 import proj_13 from '../assets/images/fashion_clas.png'
 import back from '../assets/images/proj_back.jpg'
 import ProjectCard from '@/components/Cards/ProjectCard'
+import VantaFogBackground from '@/components/VantaFogBackground'
 
 const projects = [
   {
@@ -119,7 +120,7 @@ const Projects = () => {
   return (
     <div>
        <section className='w-full min-h-screen relative bg-black text-white overflow-hidden flex justify-center'>
-        <div className=' absolute   h-full overflow-hidden  rounded-3xl flex flex-col items-center justify-center '>
+        <div className=' absolute  h-full overflow-hidden  rounded-3xl flex flex-col items-center justify-center '>
           <div className='pt-20 relative h-full flex flex-wrap justify-center items-center  gap-8 pb-8 rounded-3xl px-6 overflow-y-auto overflow-x-hidden scroll-smooth'>
            {
             projects.map((project,index)=>(
@@ -130,7 +131,8 @@ const Projects = () => {
           </div>
           {/* <a href="https://github.com/Vivek1-coder" target='_blank'><button className='btn mt-5 hover:scale-105'>Click for more projects...</button></a> */}
         </div>
-        <img className='h-screen w-full' src={back} alt="background" />
+        <VantaFogBackground />
+        {/* <img className='h-screen w-full' src={back} alt="background" /> */}
         </section>
     </div>
   )

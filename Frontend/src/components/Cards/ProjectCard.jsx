@@ -15,8 +15,8 @@ export default function ProjectCard({ project }) {
 
   return (
     <Card
-      className="w-full max-w-sm min-h-[570px]  bg-transparent backdrop-blur-md border border-zinc-800 shadow-md hover:shadow-2xl hover:border-zinc-700 transition-all duration-300 ease-in-out rounded-2xl overflow-hidden group"
-    >
+      className="w-full z-30 max-w-sm min-h-[570px] bg-gradient-to-br from-blue-800 via-purple-800 to-black/30 border border-zinc-800 shadow-md hover:shadow-2xl hover:border-zinc-700 transition-all duration-300 ease-in-out rounded-2xl overflow-hidden group"
+    > 
       {/* Image with slight zoom effect */}
       <div className="overflow-hidden">
         <img
@@ -27,30 +27,11 @@ export default function ProjectCard({ project }) {
       </div>
 
       <CardHeader>
-        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-200">
-          {name}
-        </h3>
-      </CardHeader>
-
-      <CardContent>
-        <p className="text-sm text-zinc-400 mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill, index) => (
-            <Badge
-              key={index}
-              className="bg-zinc-800 text-white hover:bg-zinc-700 transition-all"
-            >
-              {skill}
-            </Badge>
-          ))}
-        </div>
-      </CardContent>
-
-      <CardFooter className="absolute bottom-1  w-full flex justify-between items-end h-full mt-4 gap-2">
+        <div className='flex justify-between'>
         <Button
           asChild
           variant="outline"
-          className="border-zinc-700 bg-transparent backdrop-blur-md text-white hover:text-blue-800 hover:border-blue-400 transition-colors"
+          className="border-zinc-200 bg-transparent backdrop-blur-md text-white hover:text-blue-800 hover:border-blue-400 transition-colors"
         >
           <a
             href={github}
@@ -79,7 +60,27 @@ export default function ProjectCard({ project }) {
             </a>
           </Button>
         )}
-      </CardFooter>
+        </div>
+        <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-200">
+          {name}
+        </h3>
+      </CardHeader>
+
+      <CardContent>
+        <p className="text-sm text-zinc-100 mb-4">{description}</p>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, index) => (
+            <Badge
+              key={index}
+              className="bg-zinc-800 text-white hover:bg-zinc-700 transition-all"
+            >
+              {skill}
+            </Badge>
+          ))}
+        </div>
+      </CardContent>
+
+      
     </Card>
   )
 }

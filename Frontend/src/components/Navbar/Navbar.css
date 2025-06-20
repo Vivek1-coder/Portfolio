@@ -8,7 +8,7 @@
   content: "";
   position: absolute;
   bottom: -2px; /* Adjust the distance from the text */
-  left: 50%;
+  left: 0%;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
   width: 110%;

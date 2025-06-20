@@ -45,7 +45,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .header {
-    @apply flex justify-between items-center sm:px-16 px-8 py-4 mx-auto outline outline-1 backdrop-blur-sm  absolute top-0 md:w-[100vw] z-10 right-0 left-0;
+    @apply flex justify-between items-center sm:px-16 px-8 py-4 mx-auto outline outline-1 backdrop-blur-sm  absolute top-0 md:w-[100vw] z-50 right-0 left-0;
   }
 
   .footer {
