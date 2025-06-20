@@ -35,7 +35,7 @@ const Navbar = () => {
         <span></span>
         <span></span>
       </button>
-      <nav className={`menu ${isMenuOpen ? "active" : ""}`}>
+      <nav className={`menu ${isMenuOpen ? "active" : ""} font-semibold`}>
         <NavLink
           to='/about'
           className={({ isActive }) =>

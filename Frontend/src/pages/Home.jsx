@@ -3,6 +3,7 @@ import boy from '../assets/images/boy.jpg'
 import Typewriter from '../components/TypingAnimation/Typewriter'
 import Social from '../components/Social/Social.jsx'
 import DownloadCVButton from '../components/Buttons/DownloadCV.jsx'
+import { Button } from '@/components/ui/button'
 
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
   Pop up
