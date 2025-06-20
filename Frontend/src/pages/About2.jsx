@@ -487,7 +487,7 @@ const About2 = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur opacity-30 animate-glow-pulse"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur opacity-30 "></div>
               <div className="relative bg-slate-900/70 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
                 <h3 className="text-2xl font-bold mb-2 text-white flex justify-center items-center py-4">
                   <FaCode className="inline-block w-6 h-6 mr-2" />
@@ -543,7 +543,7 @@ const About2 = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur opacity-30 animate-glow-pulse"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur opacity-30"></div>
               <div className="relative bg-slate-900/70 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
                 <h3 className="text-2xl font-bold mb-2 text-white flex justify-center items-center py-4">
                   <FaCode className="inline-block w-6 h-6 mr-2" />

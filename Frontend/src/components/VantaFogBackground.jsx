@@ -10,7 +10,8 @@ const VantaFog = () => {
       if (!window.THREE) {
         await new Promise((resolve) => {
           const script = document.createElement("script");
-          script.src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js";
+          script.src =
+            "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js";
           script.onload = resolve;
           document.body.appendChild(script);
         });
@@ -20,7 +21,8 @@ const VantaFog = () => {
       if (!window.VANTA || !window.VANTA.FOG) {
         await new Promise((resolve) => {
           const script = document.createElement("script");
-          script.src = "https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.fog.min.js";
+          script.src =
+            "https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.fog.min.js";
           script.onload = resolve;
           document.body.appendChild(script);
         });
@@ -32,16 +34,16 @@ const VantaFog = () => {
           el: vantaRef.current,
           THREE: window.THREE,
           mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  highlightColor: 0xdf76ed,
-  midtoneColor: 0xdfb1ed,
-  lowlightColor: 0xb81bd9,
-  baseColor: 0x6919ef,
-  blurFactor: 0.57,
-  speed: 2.10,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          highlightColor: 0xdf76ed,
+          midtoneColor: 0xdfb1ed,
+          lowlightColor: 0xb81bd9,
+          baseColor: 0x6919ef,
+          blurFactor: 0.57,
+          speed: 2.1,
         });
         setVantaEffect(effect);
       }

@@ -9,13 +9,14 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Github, ExternalLink } from 'lucide-react'
+import AnimatedBackground from '../AnimatedBackground'
 
 export default function ProjectCard({ project }) {
   const { image, name, description, skills, github, live } = project
 
   return (
     <Card
-      className="w-full z-30 max-w-sm min-h-[570px] bg-gradient-to-br from-blue-800 via-purple-800 to-black/30 border border-zinc-800 shadow-md hover:shadow-2xl hover:border-zinc-700 transition-all duration-300 ease-in-out rounded-2xl overflow-hidden group"
+      className="w-full z-40 max-w-sm min-h-[570px] bg-gradient-to-br from-blue-800 via-purple-800 to-black/30 border border-zinc-800 shadow-md hover:shadow-2xl hover:border-zinc-700 transition-all duration-300 ease-in-out rounded-2xl overflow-hidden group"
     > 
       {/* Image with slight zoom effect */}
       <div className="overflow-hidden">
@@ -31,7 +32,7 @@ export default function ProjectCard({ project }) {
         <Button
           asChild
           variant="outline"
-          className="border-zinc-200 bg-transparent backdrop-blur-md text-white hover:text-blue-800 hover:border-blue-400 transition-colors"
+          className="border-zinc-200 bg-transparent  text-white hover:text-blue-800 hover:border-blue-400 transition-colors"
         >
           <a
             href={github}
@@ -67,12 +68,13 @@ export default function ProjectCard({ project }) {
       </CardHeader>
 
       <CardContent>
+        
         <p className="text-sm text-zinc-100 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, index) => (
             <Badge
               key={index}
-              className="bg-zinc-800 text-white hover:bg-zinc-700 transition-all"
+              className="bg-gradient-to-br from-blue-900 to-violet-950 text-white hover:from-violet-800 hover:to-blue-900 transition-all"
             >
               {skill}
             </Badge>
