@@ -38,11 +38,38 @@ body:has(.card[data-color="green"]:hover) {
     @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
   }
 
-
+@keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(720deg); }
+  }
 
   .btn {
     @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
   }
+@keyframes neon-shadow {
+  0% {
+    box-shadow: 0 0 20px #f59e0b; /* Amber 500 */
+  }
+  25% {
+    box-shadow: 0 0 25px #fb7185; /* Rose 400 */
+  }
+  50% {
+    box-shadow: 0 0 25px #a855f7; /* Violet 500 */
+  }
+  75% {
+    box-shadow: 0 0 25px #8b5cf6; /* Purple 500 */
+  }
+  100% {
+    box-shadow: 0 0 20px #f59e0b; /* Back to Amber */
+  }
+}
+
+
+@layer utilities {
+  .animate-neon-shadow {
+    animation: neon-shadow 5s linear infinite;
+  }
+}
 
   .header {
     @apply flex justify-between items-center sm:px-16 px-8 py-4 mx-auto outline outline-1 backdrop-blur-sm  absolute top-0 md:w-[100vw] z-50 right-0 left-0;
