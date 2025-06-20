@@ -121,7 +121,7 @@ const Projects = () => {
     <div>
        <section className='w-full min-h-screen relative bg-black text-white overflow-hidden flex justify-center'>
         <div className=' absolute  h-full overflow-hidden  rounded-3xl flex flex-col items-center justify-center '>
-          <div className='pt-20 relative h-full flex flex-wrap justify-center items-center  gap-8 pb-8 rounded-3xl px-6 overflow-y-auto overflow-x-hidden scroll-smooth'>
+          <div className='pt-20 relative z-20 h-full flex flex-wrap justify-center items-center  gap-8 pb-8 rounded-3xl px-6 overflow-y-auto overflow-x-hidden scroll-smooth'>
            {
             projects.map((project,index)=>(
               <ProjectCard key={index} project={project}

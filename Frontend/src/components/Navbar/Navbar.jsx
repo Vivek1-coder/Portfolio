@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className='header z-50 bg-gradient-to-br from-black/30 to-black/30  outline-white w-full   flex  items-center justify-between px-4 py-2'>
+    <header className='fixed top-0 header z-50 bg-gradient-to-br from-black/30 to-black/30  outline-white w-full   flex  items-center justify-between px-4 py-2'>
       <NavLink to='/'>
         <House className="h-8 w-8 text-white font-medium"/>
       </NavLink>

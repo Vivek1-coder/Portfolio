@@ -98,24 +98,24 @@ const About = () => {
       });
   }, []);
   
-  useEffect(() => {
-    fetch("https://alfa-leetcode-api.onrender.com/userContestRankingInfo/vivek1coder")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setLeetcodeAttended(
-          data.data.userContestRanking.attendedContestsCount
-        );
-        setLeetcodeRatings(data.data.userContestRanking.rating);
-      })
-      .catch((error) => {
-        console.error("Error fetching LeetCode data:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://alfa-leetcode-api.onrender.com/userContestRankingInfo/vivek1coder")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setLeetcodeAttended(
+  //         data.data.userContestRanking.attendedContestsCount
+  //       );
+  //       setLeetcodeRatings(data.data.userContestRanking.rating);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching LeetCode data:", error);
+  //     });
+  // }, []);
   
 
   return (
