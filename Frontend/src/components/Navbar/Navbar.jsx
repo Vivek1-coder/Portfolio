@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import './Navbar.css';
+import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
-import {Brain, BrainCircuit, House} from "lucide-react"
+import { Brain, BrainCircuit, House } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -22,12 +22,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className='fixed top-0 header z-50 bg-black/60 backdrop-blur-xl  outline-white w-full   flex  items-center justify-between px-4 py-2'>
-      <NavLink to='/' className="flex gap-2">
-        <BrainCircuit className="h-8 w-8 font-extrabold text-cyan-300 "/>
-        <h1 className="text-3xl font-extrabold bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent tracking-wide">
-    the.Developer
-  </h1>
+    <header className="fixed top-0 header z-50 bg-black/60 backdrop-blur-xl  outline-white w-full   flex  items-center justify-between px-4 py-2">
+      <NavLink to="/" className="flex gap-2 justify-center items-center">
+        <BrainCircuit className="h-5 w-5 md:h-8 md:w-8 font-extrabold text-cyan-300 " />
+        <h1 className="text-lg md:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent tracking-wide">
+          the.Developer
+        </h1>
       </NavLink>
       <button
         className={`hamburger ${isMenuOpen ? "open" : ""}`}
@@ -40,7 +40,7 @@ const Navbar = () => {
       </button>
       <nav className={`menu ${isMenuOpen ? "active" : ""} font-semibold`}>
         <NavLink
-          to='/about'
+          to="/about"
           className={({ isActive }) =>
             `${isActive ? "text-yellow-400" : "text-white"} ${
               !isSmallScreen ? "nav-link" : ""
@@ -50,7 +50,7 @@ const Navbar = () => {
           About
         </NavLink>
         <NavLink
-          to='/projects'
+          to="/projects"
           className={({ isActive }) =>
             `${isActive ? "text-yellow-400" : "text-white"} ${
               !isSmallScreen ? "nav-link" : ""
@@ -60,7 +60,7 @@ const Navbar = () => {
           Projects
         </NavLink>
         <NavLink
-          to='/contact'
+          to="/contact"
           className={({ isActive }) =>
             `${isActive ? "text-yellow-400" : "text-white"} ${
               !isSmallScreen ? "nav-link" : ""

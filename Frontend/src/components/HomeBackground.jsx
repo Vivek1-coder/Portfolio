@@ -47,21 +47,46 @@ export default function HaloBackground() {
   return (
     <div
       ref={vantaRef}
-      className="w-full h-screen flex justify-center items-center bg-black text-white overflow-hidden"
+      className="w-full h-screen flex justify-center items-center bg-black text-white overflow-x-hidden overflow-y-hidden"
     >
       {/* <AnimatedBackground/> */}
       {/* Text Section */}
-        <div className="w-full h-full flex justify-center items-center backdrop-blur-3xl z-30">
-      <div className="z-30 w-full md:w-1/2 flex flex-col justify-center items-center text-center gap-4 p-10 ">
+        <div className="w-full max-md:min-h-screen  h-full flex max-lg:flex-col justify-center items-center backdrop-blur-3xl z-30 overflow-y-auto">
+         
+      <div className="z-30 w-full max-md:mt-28 max-md:mb-10 h-full lg:w-1/2 flex flex-col justify-center items-center text-center gap-4 max-lg:pt-20 max-lg:px-4 lg:p-10 ">
+       <div className="z-30 hidden max-lg:flex w-1/2  lg:h-full justify-center items-center mb-10 md:mb-20">
+        <div className="relative animate-fade-in">
+          <div className="relative w-48 h-48 md:w-96 md:h-96 mx-auto">
+            {/* Neon rotating border */}
+            <div className="absolute inset-0 rounded-full animate-[spin-slow_6s_linear_infinite] before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-blue-500 before:via-purple-700 before:to-pink-800 before:blur-sm before:opacity-90"></div>
+
+            {/* Image container */}
+            <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-2 border-purple-400 animate-neon-shadow">
+              <img
+                src="/profile.jpg"
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Floating orbs for depth */}
+          <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#3B82F6] rounded-full animate-bounce shadow-lg shadow-blue-500/50"></div>
+          <div
+            className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#8B5CF6] rounded-full animate-bounce shadow-lg shadow-purple-500/50"
+            style={{ animationDelay: "0.5s" }}
+          ></div>
+        </div>
+      </div>
         <div className="flex flex-col gap-2">
-          <p className="font-bold text-xl">HII I'm</p>
-          <p className="font-bold text-5xl">Vivek</p>
-          <div className="font-bold text-2xl">
+          <p className="font-bold text-md md:text-xl">HII I'm</p>
+          <p className="font-bold text-2xl md:text-5xl">Vivek</p>
+          <div className="font-bold text-lg md:text-2xl">
             <Typewriter words={["Web Developer", "AI-ML Engineer","Tech Lover"]} />
           </div>
         </div>
 
-        <div className="text-white w-full md:w-3/4 background2 md:bg-slate-100 h-auto text-center justify-center rounded-xl p-6">
+        <div className="text-white text-sm md:text-md font-bold w-full  lg:w-3/4 background2 lg:bg-slate-100 h-auto text-center justify-center rounded-xl p-6">
           <p>
           I create beautiful, responsive web applications with modern technologies. Passionate about clean code, user experience, and continuous learning.
           </p>
@@ -76,7 +101,7 @@ export default function HaloBackground() {
         
       </div>
 
-      <div className="z-30 flex w-1/2 h-full justify-center items-center">
+      <div className="z-30 hidden lg:flex w-1/2 h-full justify-center items-center">
         <div className="relative animate-fade-in">
           <div className="relative w-96 h-96 mx-auto">
             {/* Neon rotating border */}

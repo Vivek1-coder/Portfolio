@@ -24,7 +24,9 @@
 }
 
 .menu {
+ 
   display: flex;
+
   gap: 20px;
 }
 
@@ -33,6 +35,8 @@
   top: 54px;
   left: 0;
   right: 0;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 15px;
   padding: 10px;
@@ -71,7 +75,7 @@
 @media (max-width: 768px) {
   .menu {
     display: none;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.885);
     z-index: 10000;
   }
   .header {

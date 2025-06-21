@@ -16,7 +16,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <Card
-      className="w-full z-40 max-w-sm min-h-[570px] bg-gradient-to-br from-blue-800 via-purple-800 to-black/30 border border-zinc-800 shadow-md hover:shadow-2xl hover:border-zinc-700 transition-all duration-300 ease-in-out rounded-2xl overflow-hidden group"
+      className="w-full z-40 max-w-sm min-h-[570px] bg-gradient-to-br from-blue-800 via-purple-900 to-black/30 border border-purple-800 shadow-md hover:shadow-2xl hover:border-violet-700 transition-all duration-300 ease-in-out rounded-2xl overflow-hidden group"
     > 
       {/* Image with slight zoom effect */}
       <div className="overflow-hidden">
