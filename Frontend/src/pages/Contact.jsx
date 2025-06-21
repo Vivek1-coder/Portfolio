@@ -89,7 +89,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              <div className="flex h-16  justify-between gap-3">
+              <div className="flex h-16  justify-between gap-2">
                 <label className="text-xl font-bold">Message :</label>
                 <textarea
                   className="text-black  rounded-lg  h-20"
