@@ -3,6 +3,7 @@ import help from '../assets/images/help.png'
 import Social from '../components/Social/Social';
 import emailjs from '@emailjs/browser';
 import { Github, Instagram, Linkedin } from 'lucide-react';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Contact = () => {
     const newform = {
@@ -33,7 +34,7 @@ const Contact = () => {
         SetButtonText("Sending...")
         emailjs.send(serviceId,templateId,templateParams,publicKey)
         .then((response) => {
-            console.log("Email sent successfully",response);
+            toast.success("Email sent successfully",response);
             setFormData(newform)
             SetButtonText("Send")
         })
@@ -113,6 +114,7 @@ const Contact = () => {
         
           
         
+
         </section>
     );
 };
