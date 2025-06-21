@@ -28,6 +28,7 @@ import {
   GraduationCap,
   Landmark,
   School,
+  FileCode2,
 } from "lucide-react";
 
 import {
@@ -187,11 +188,11 @@ const About2 = () => {
       number: "200+",
       link: "https://leetcode.com/u/vivek1coder/",
       label: "LeetCode Questions",
-      icon: <FaQuestion className="w-8 h-8 mb-3 text-indigo-500" />, // lucide-react
+      icon: <FileCode2 className="w-8 h-8 mb-3 text-indigo-500" />, // lucide-react
       color: "from-indigo-500 to-sky-500",
     },
     {
-      number: "2 hrs/day",
+      number: "1.5 hrs+",
       link: "#",
       label: "of Calisthenics & Yoga",
       icon: <Dumbbell className="w-8 h-8 mb-3 text-lime-500" />, // lucide-react
@@ -637,17 +638,18 @@ const About2 = () => {
         </div>
 
         {/* Call to Action */}
-        <div
+        {/* <div
           className="text-center mt-20 animate-fade-in-up"
           style={{ animationDelay: "0.6s" }}
         >
           <div className="inline-block relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur opacity-30 animate-glow-pulse"></div>
+        
             <button className="relative bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300">
               Let's Work Together
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

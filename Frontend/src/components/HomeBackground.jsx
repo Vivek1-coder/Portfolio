@@ -47,7 +47,7 @@ export default function HaloBackground() {
   return (
     <div
       ref={vantaRef}
-      className="w-full h-screen flex justify-center items-center bg-blue-600 text-white overflow-hidden"
+      className="w-full h-screen flex justify-center items-center bg-black text-white overflow-hidden"
     >
       {/* <AnimatedBackground/> */}
       {/* Text Section */}
