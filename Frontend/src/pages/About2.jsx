@@ -61,7 +61,7 @@ const About2 = () => {
   const expertiseSkills = [
     {
       name: "Web Development",
-      icon: <MonitorSmartphone className="inline-block w-5 h-5 mr-2" />,
+      icon: <MonitorSmartphone className="inline-block w-5 h-5 mr-0 md:mr-2" />,
     },
     { name: "AI-ML", icon: <Brain className="inline-block w-5 h-5 mr-2" /> },
     {
@@ -99,7 +99,7 @@ const About2 = () => {
       icon: <LucideLayoutPanelTop className="inline-block w-5 h-5 mr-2" />,
     },
     {
-      name: "Ubuntu(Linux)",
+      name: "Ubuntu (Linux)",
       icon: <SiUbuntu className="inline-block w-5 h-5 mr-2" />,
     },
   ];
@@ -201,7 +201,7 @@ const About2 = () => {
     {
       number: "24/7",
       link: "https://github.com/Vivek1-coder",
-      label: "Dedication",
+      label: "Dedication & Discipline",
       icon: (
         <Flame className="w-8 h-8 mb-3 text-2xl font-extrabold text-orange-600 " />
       ), // lucide-react
@@ -269,161 +269,65 @@ const About2 = () => {
     <div className="min-h-screen w-full relative overflow-hidden text-white overflow-x-clip">
       <AnimatedBackground />
 
-      <div className="relative z-10 container  px-6 py-20">
+      <div className="relative z-10 container px-2 md:px-6 py-20">
         {/* Header Section */}
         <div className="text-center mb-20 animate-fade-in-up">
           {/* <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6 animate-glow-pulse">
             <User className="w-10 h-10 text-white" />
           </div> */}
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Let's Talk About Me
           </h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-xl  text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Passionate developer crafting digital experiences with creativity
             and precision
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2  md:gap-16 justify-center items-center max-w-6xl md:mx-auto">
           {/* Left Column - Bio */}
           
           <div
-            className="space-y-8 animate-fade-in-up"
+            className="space-y-2 md:space-y-8 animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
-        <div className="relative">
+        <div className="relative max-md:mx-6"> 
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur opacity-30 animate-glow-pulse"></div>
-              <div className="relative bg-slate-900/70 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 p-1 animate-float">
+              <div className="relative bg-slate-900/70   backdrop-blur-sm border border-slate-700 rounded-xl px-2 py-6 md:p-8 text-center">
+                <div className="w-20 h-20 md:w-32 md:h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 p-1 animate-float">
                   <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-                    <User className="w-16 h-16 text-cyan-400" />
+                    <User className="w-10 h-10 md:w-16 md:h-16 text-cyan-400" />
                   </div>
                 </div>
-                <h1 className="text-4xl font-bold mb-2 text-white">Vivek</h1>
-                <h3 className="text-2xl font-bold mb-2 text-white">
+                <h1 className="text-xl md:text-4xl font-bold mb-2 text-white">Vivek</h1>
+                <h3 className="text-md md:text-2xl font-bold mb-2 text-white">
                   (the.Developer)
                 </h3>
-                <p className="text-slate-400 mb-4">
+                <p className="max-md:text-sm text-slate-400 mb-4">
                   Turning Ideas into Reality
                 </p>
-                <div className="flex justify-center space-x-4">
-                  <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+                <div className="flex justify-center space-x-2 md:space-x-4">
+                  <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400 animate-pulse"></div>
                   <div
-                    className="w-3 h-3 rounded-full bg-cyan-400 animate-pulse"
+                    className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-cyan-400 animate-pulse"
                     style={{ animationDelay: "0.5s" }}
                   ></div>
                   <div
-                    className="w-3 h-3 rounded-full bg-purple-400 animate-pulse"
+                    className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-400 animate-pulse"
                     style={{ animationDelay: "1s" }}
                   ></div>
                 </div>
               </div>
             </div>
 
-            {/* Skills Section */}
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
-              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-6 text-purple-400 flex items-center">
-                  <BookOpen className="w-6 h-6 mr-3" />
-                  Expertise
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {expertiseSkills.map((skill, index) => (
-                    <div
-                      key={skill.name}
-                      className="bg-slate-800/50 rounded-lg p-3 px-6 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
-                      style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                      <div className="w-1/3 text-center">{skill.icon}</div>
-                      <div className="w-2/3 text-left">{skill.name}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Languages section */}
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
-              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-6 text-purple-400 flex items-center">
-                  <Code className="w-6 h-6 mr-3" />
-                  Languages
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {languageSkills.map((skill, index) => (
-                    <div
-                      key={skill.name}
-                      className="bg-slate-800/50 rounded-lg p-3 px-6 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
-                      style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                      <div className="w-1/3 text-center">{skill.icon}</div>
-                      <div className="w-2/3 text-left">{skill.name}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
-              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-6 text-purple-400 flex items-center">
-                  <RiStackFill className="w-6 h-6 mr-3" />
-                  Frameworks/ Libraries
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {frameworkSkills.map((skill, index) => (
-                    <div
-                      key={skill.name}
-                      className="bg-slate-800/50 rounded-lg p-3 px-6 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
-                      style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                      <div className="w-1/3 text-center">{skill.icon}</div>
-                      <div className="w-2/3 text-left">{skill.name}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
-              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-6 text-purple-400 flex items-center">
-                  <MdDevices className="w-6 h-6 mr-3" />
-                  Operating Systems
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {osSkills.map((skill, index) => (
-                    <div
-                      key={skill.name}
-                      className="bg-slate-800/50 rounded-lg p-3 px-6 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
-                      style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                      {" "}
-                      <div className="w-1/3 text-center">{skill.icon}</div>
-                      <div className="w-2/3 text-left">{skill.name}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Visual Elements */}
-          <div
-            className="space-y-8 animate-fade-in-up "
-            style={{ animationDelay: "0.4s" }}
-          >
-            {/* Profile Card */}
-             <div className="relative">
+             <div className="md:hidden relative max-md:mx-4">
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg blur opacity-25"></div>
               <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">
                   My Journey
                 </h2>
-                <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                <p className="text-slate-300 text-sm md:text-lg leading-relaxed mb-6">
                   Welcome to my digital portfolio! I'm a passionate developer
                   who believes in the power of technology to create meaningful
                   experiences. My journey began with curiosity and has evolved
@@ -438,9 +342,127 @@ const About2 = () => {
               </div>
             </div>
 
-            <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-6 text-purple-400 flex items-center">
-                <BookOpen className="w-6 h-6 mr-3" />
+            {/* Skills Section */}
+            <div className="relative max-md:mx-4">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
+              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
+                <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
+                  <BookOpen className="w-5 h-5 md:w-6 md:h-6 mr-3" />
+                  Expertise
+                </h3>
+                <div className="grid grid-cols-2 gap-2 md:gap-4">
+                  {expertiseSkills.map((skill, index) => (
+                    <div
+                      key={skill.name}
+                      className="bg-slate-800/50 rounded-lg py-2 md:p-3 md:px-6 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
+                      <div className="w-1/3 text-center ">{skill.icon}</div>
+                      <div className="w-2/3 text-left max-md:text-sm">{skill.name}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Languages section */}
+            <div className="relative max-md:mx-4">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
+              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
+                <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
+                  <Code className="w-5 h-5 md:w-6 md:h-6 mr-3" />
+                  Languages
+                </h3>
+                 <div className="grid grid-cols-2 gap-2 md:gap-4">
+                  {languageSkills.map((skill, index) => (
+                    <div
+                      key={skill.name}
+                      className="bg-slate-800/50 rounded-lg p-3 px-6 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
+                      <div className="w-1/3 text-center">{skill.icon}</div>
+                      <div className="w-2/3 text-left max-md:text-sm">{skill.name}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative max-md:mx-4">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
+              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
+               <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
+                  <RiStackFill className="w-5 h-5 md:w-6 md:h-6 mr-3" />
+                  Frameworks/ Libraries
+                </h3>
+                <div className="grid grid-cols-2 gap-2 md:gap-4">
+                  {frameworkSkills.map((skill, index) => (
+                    <div
+                      key={skill.name}
+                      className="bg-slate-800/50 rounded-lg p-3 px-6 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
+                      <div className="w-1/3 text-center">{skill.icon}</div>
+                      <div className="w-2/3 text-left max-md:text-sm">{skill.name}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="relative max-md:mx-4">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
+              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
+                 <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
+                  <MdDevices className="w-5 h-5 md:w-6 md:h-6 mr-3"  />
+                  Operating Systems
+                </h3>
+                <div className="grid grid-cols-2 gap-2 md:gap-4">
+                  {osSkills.map((skill, index) => (
+                    <div
+                      key={skill.name}
+                      className="bg-slate-800/50 rounded-lg p-3 px-6 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
+                      {" "}
+                      <div className="w-1/3 text-center">{skill.icon}</div>
+                      <div className="w-2/3 text-left max-md:text-sm">{skill.name}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Visual Elements */}
+          <div
+            className="space-y-4 md:space-y-8 animate-fade-in-up "
+            style={{ animationDelay: "0.4s" }}
+          >
+            {/* Profile Card */}
+             <div className="max-md:hidden relative max-md:mx-4">
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg blur opacity-25"></div>
+              <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
+                <h2 className="text-3xl font-bold mb-6 text-cyan-400">
+                  My Journey
+                </h2>
+                <p className="text-slate-300 text-sm md:text-lg leading-relaxed mb-6">
+                  Welcome to my digital portfolio! I'm a passionate developer
+                  who believes in the power of technology to create meaningful
+                  experiences. My journey began with curiosity and has evolved
+                  into a dedication to crafting beautiful, functional solutions.
+                </p>
+                {/* <p className="text-slate-300 text-lg leading-relaxed">
+                  I specialize in creating modern web applications that not only
+                  look stunning but also provide exceptional user experiences.
+                  Every project is an opportunity to push creative boundaries
+                  and deliver something truly remarkable.
+                </p> */}
+              </div>
+            </div>
+
+            <div className="relative max-md:m-4 bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
+              <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
+                <BookOpen className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                 Education
               </h3>
 
@@ -450,7 +472,7 @@ const About2 = () => {
                   className="bg-slate-800/50 rounded-lg p-5 text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex flex-col items-start gap-2"
                   style={{ animationDelay: "0.1s" }}
                 >
-                  <div className="flex items-center gap-3 text-lg font-semibold text-slate-100">
+                  <div className="flex items-center gap-3 md:text-lg font-semibold text-slate-100">
                     <GraduationCap className="w-5 h-5 text-purple-400" />
                     B.Tech - Computer Science and Engineering
                   </div>
@@ -543,6 +565,7 @@ const About2 = () => {
                 </div>
               </div>
             </div>
+
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur opacity-30"></div>
               <div className="relative bg-slate-900/70 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
@@ -607,7 +630,7 @@ const About2 = () => {
             </div>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2 md:gap-4 max-md:mx-4">
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
