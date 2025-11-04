@@ -1,6 +1,7 @@
 import React from 'react'
 import messaging from '../assets/images/messages.png'
-import xambuddy from '../assets/images/image.png'
+import xambuddy from '../assets/images/xambuddy.png'
+import huntxhunt from '../assets/images/huntxhunt.png'
 import proj_1 from '../assets/images/proj_1.jpeg'
 import proj_2 from '../assets/images/proj_2.jpg'
 import proj_3 from '../assets/images/proj_3.jpeg'
@@ -23,6 +24,14 @@ const projects = [
     skills: ['Nextjs','Node.js','MongoDb','NOSQL','TypeScript','Auth.js','Google OAuth','socket.io','Tailwind','Google APIs','Drive API','Youtube API','Shadcn','Git','Github','Vercel'],
     github: 'https://github.com/Vivek1-coder/XamBuddy',
     live: 'https://xambuddy-ashy.vercel.app/',
+  },
+  {
+    image: huntxhunt,
+    name: 'RFID Treasure Hunt',
+    description: 'A website designed for a tresure hunt event based on rfid tagging and real time updates.',
+    skills: ['Reactjs','Node.js','MongoDb','Socket.io','NOSQL','JavaScript','Tailwind','ESP32','RFID-card','RC522 reader','Git','Github','Vercel'],
+    github: 'https://github.com/Vivek1-coder/rfid-treasurehunt-event.git',
+    live: 'https://huntxhunt.innovisionnsut.com',
   },
   {
     image: proj_10,
