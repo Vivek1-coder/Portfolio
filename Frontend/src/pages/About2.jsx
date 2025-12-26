@@ -178,35 +178,35 @@ const About2 = () => {
       color: "from-violet-500 to-fuchsia-500",
     },
     {
-      number: "260+",
-      link: "https://www.naukri.com/code360/profile/MrProton",
-      label: "Coding Ninjas Questions",
-      icon: <Braces className="w-8 h-8 mb-3 text-amber-500" />, // lucide-react
-      color: "from-yellow-500 to-amber-500",
-    },
-    {
-      number: "200+",
+      number: "500+",
       link: "https://leetcode.com/u/vivek1coder/",
       label: "LeetCode Questions",
       icon: <FileCode2 className="w-8 h-8 mb-3 text-indigo-500" />, // lucide-react
       color: "from-indigo-500 to-sky-500",
     },
     {
-      number: "1.5 hrs+",
-      link: "#",
-      label: "of Calisthenics & Yoga",
-      icon: <Dumbbell className="w-8 h-8 mb-3 text-lime-500" />, // lucide-react
-      color: "from-lime-500 to-emerald-400",
+      number: "260+",
+      link: "https://www.naukri.com/code360/profile/MrProton",
+      label: "Coding Ninjas Questions",
+      icon: <Braces className="w-8 h-8 mb-3 text-amber-500" />, // lucide-react
+      color: "from-yellow-500 to-amber-500",
     },
-    {
-      number: "24/7",
-      link: "https://github.com/Vivek1-coder",
-      label: "Dedication & Discipline",
-      icon: (
-        <Flame className="w-8 h-8 mb-3 text-2xl font-extrabold text-orange-600 " />
-      ), // lucide-react
-      color: "from-rose-500 to-red-500",
-    },
+    // {
+    //   number: "1.5 hrs+",
+    //   link: "#",
+    //   label: "of Calisthenics & Yoga",
+    //   icon: <Dumbbell className="w-8 h-8 mb-3 text-lime-500" />, // lucide-react
+    //   color: "from-lime-500 to-emerald-400",
+    // },
+    // {
+    //   number: "24/7",
+    //   link: "https://github.com/Vivek1-coder",
+    //   label: "Dedication & Discipline",
+    //   icon: (
+    //     <Flame className="w-8 h-8 mb-3 text-2xl font-extrabold text-orange-600 " />
+    //   ), // lucide-react
+    //   color: "from-rose-500 to-red-500",
+    // },
   ];
 
   const [codeforcesDetails, setCodeForcesDetails] = useState({
@@ -514,11 +514,11 @@ const About2 = () => {
               <div className="relative bg-slate-900/70 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
                 <h3 className="text-2xl font-bold mb-2 text-white flex justify-center items-center py-4">
                   <FaCode className="inline-block w-6 h-6 mr-2" />
-                  Coding Ninjas
+                  Leetcode
                 </h3>
 
                 <a
-                  href="https://www.naukri.com/code360/profile/MrProton"
+                  href="https://leetcode.com/u/vivek1coder/"
                   target="_blank"
                 >
                   <div
@@ -528,7 +528,7 @@ const About2 = () => {
                     <div className="w-1/3 text-center">
                       <MdStarRate className="inline-block w-5 h-5 mr-2" />
                     </div>
-                    <div className="w-2/3 text-left">1755 Ratings</div>
+                    <div className="w-2/3 text-left">1749 Ratings</div>
                   </div>
                 </a>
                 <div className="flex justify-between my-2 gap-6 mb-10">
@@ -539,7 +539,7 @@ const About2 = () => {
                     <div className="w-1/3 text-center">
                       <FaFlagCheckered className="inline-block w-5 h-5 mr-2" />
                     </div>
-                    <div className="w-2/3 text-left">2 Contests</div>
+                    <div className="w-2/3 text-left">17 Contests</div>
                   </div>
                   <div
                     className="bg-slate-800/50 rounded-lg p-3 px-6 w-full text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
@@ -548,7 +548,7 @@ const About2 = () => {
                     <div className="w-1/3 text-center">
                       <FaMedal className="inline-block w-5 h-5 mr-2" />
                     </div>
-                    <div className="w-2/3 text-left">Specialist</div>
+                    <div className="w-2/3 text-left">Top 10%</div>
                   </div>
                 </div>
 
