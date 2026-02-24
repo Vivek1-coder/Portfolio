@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import  Navbar  from "./components/Navbar/Navbar.jsx";
 import { About,About2, Contact, Home, Projects } from "./pages";
 import { ToastContainer } from "react-toastify";
+import ChatBot from "./components/ChatBot.jsx";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         pauseOnHover
         theme="dark"
         />
+      <ChatBot />
     </main>
   );
 };
