@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const BACKEND_URL = "https://vivek1-coder.vercel.app/chat";
+const BACKEND_URL = " https://portfolio-j0as.onrender.com/chat";
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
