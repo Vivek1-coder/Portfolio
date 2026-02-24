@@ -1,6 +1,147 @@
 import { useState, useRef, useEffect } from "react";
+import katex from "katex";
+import "katex/dist/katex.min.css";
 
 const BACKEND_URL = " https://portfolio-j0as.onrender.com/chat";
+
+// Helper function to render LaTeX and formatted text
+const renderFormattedText = (text) => {
+  const lines = text.split("\n");
+  const elements = [];
+
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+
+    // Handle block LaTeX ($$...$$)
+    if (line.trim().startsWith("$$")) {
+      const latex = line.replace(/^\$\$\s*/, "").replace(/\s*\$\$$/, "");
+      try {
+        elements.push(
+          <div
+            key={`latex-block-${i}`}
+            className="flex justify-center my-2 p-2 bg-gray-800/50 rounded"
+            dangerouslySetInnerHTML={{
+              __html: katex.renderToString(latex, { displayMode: true }),
+            }}
+          />
+        );
+      } catch (e) {
+        elements.push(<p key={`latex-block-${i}`}>Invalid LaTeX</p>);
+      }
+      i++;
+      continue;
+    }
+
+    // Handle bullet points
+    if (line.trim().startsWith("•") || line.trim().startsWith("-")) {
+      const content = line.replace(/^[-•]\s*/, "");
+      const parts = renderLineWithInlineLatex(content, `bullet-${i}`);
+      elements.push(
+        <div key={`bullet-${i}`} className="flex gap-2 ml-1">
+          <span className="text-blue-400 font-bold">•</span>
+          <span>{parts}</span>
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // Handle numbered lists
+    if (/^\d+\.\s/.test(line.trim())) {
+      const match = line.match(/^\d+\./);
+      const content = line.replace(/^\d+\.\s*/, "");
+      const parts = renderLineWithInlineLatex(content, `num-${i}`);
+      elements.push(
+        <div key={`num-${i}`} className="flex gap-2 ml-1">
+          <span className="text-blue-400 font-bold">{match[0]}</span>
+          <span>{parts}</span>
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // Handle regular lines with inline LaTeX
+    if (line.trim()) {
+      const parts = renderLineWithInlineLatex(line, `line-${i}`);
+      elements.push(<p key={`p-${i}`}>{parts}</p>);
+      i++;
+      continue;
+    }
+
+    // Preserve empty lines for spacing
+    if (i < lines.length - 1) {
+      elements.push(<div key={`space-${i}`} className="h-1" />);
+    }
+    i++;
+  }
+
+  return <div className="space-y-1">{elements}</div>;
+};
+
+// Helper to render inline LaTeX ($...$) within a line
+const renderLineWithInlineLatex = (line, baseKey) => {
+  const parts = [];
+  const regex = /\$([^$]+)\$/g;
+  let lastIndex = 0;
+  let match;
+  let partIndex = 0;
+
+  while ((match = regex.exec(line)) !== null) {
+    // Add text before LaTeX
+    if (match.index > lastIndex) {
+      const textContent = line.substring(lastIndex, match.index);
+      if (textContent) {
+        parts.push(
+          <span key={`${baseKey}-text-${partIndex}`}>
+            {textContent}
+          </span>
+        );
+        partIndex++;
+      }
+    }
+
+    // Add LaTeX
+    try {
+      const latex = match[1];
+      parts.push(
+        <span
+          key={`${baseKey}-latex-${partIndex}`}
+          dangerouslySetInnerHTML={{
+            __html: katex.renderToString(latex, { displayMode: false }),
+          }}
+          className="inline-block"
+        />
+      );
+      partIndex++;
+    } catch (e) {
+      // Fallback: show raw LaTeX in a safe way
+      parts.push(
+        <span key={`${baseKey}-error-${partIndex}`}>
+          {match[0]}
+        </span>
+      );
+      partIndex++;
+    }
+
+    lastIndex = regex.lastIndex;
+  }
+
+  // Add remaining text
+  if (lastIndex < line.length) {
+    const remainingText = line.substring(lastIndex);
+    if (remainingText) {
+      parts.push(
+        <span key={`${baseKey}-text-${partIndex}`}>
+          {remainingText}
+        </span>
+      );
+    }
+  }
+
+  return parts.length > 0 ? parts : <span>{line}</span>;
+};
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,13 +246,13 @@ export default function ChatBot() {
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div
-                  className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm leading-relaxed whitespace-pre-wrap ${
+                  className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm leading-relaxed ${
                     msg.role === "user"
                       ? "bg-blue-600 text-white rounded-br-md"
                       : "bg-gray-700 text-gray-100 rounded-bl-md"
                   }`}
                 >
-                  {msg.text}
+                  {msg.role === "user" ? msg.text : renderFormattedText(msg.text)}
                 </div>
               </div>
             ))}
