@@ -6,7 +6,7 @@ const DownloadCVButton = () => {
   return (
 
       <a
-        href="/Resume(off).pdf"
+        href="/resume.pdf"
         download
         className="relative flex gap-4 px-10 py-4 text-white font-semibold text-lg rounded-xl 
                    bg-slate-800/30 backdrop-blur-md border border-transparent 
