@@ -37,7 +37,7 @@ LeetCode: https://leetcode.com/u/vivek1coder/
 === EDUCATION ===
 - B.Tech in Computer Science & Engineering
   Netaji Subhas University of Technology (NSUT), 2023 – 2027
-  CGPA: 7.91 / 10
+  CGPA: 8.05 / 10
 
 - CBSE Class XII, 2023
   Sarvodaya Bal Vidyalaya
@@ -46,6 +46,10 @@ LeetCode: https://leetcode.com/u/vivek1coder/
 - CBSE Class X, 2021
   Sarvodaya Bal Vidyalaya
   Percentage: 93.2%
+
+- Rank 1 in class from 1st to 12th 
+- Cleared JEE mains with a percentile of 97.07% 
+- Cleared JEE Advanced with a CRL of 13559
 
 === EXPERIENCE ===
 - Full Stack Developer Intern — StepSTEM (May 2025 – July 2025)
@@ -78,8 +82,9 @@ LeetCode: https://leetcode.com/u/vivek1coder/
    • Tech: Python, TensorFlow, Keras, Pandas, NumPy, Streamlit
 
 === ACHIEVEMENTS ===
-- LeetCode: Solved 550+ DSA problems; Rating 1836 (Top ~6.5% globally)
+- LeetCode: Solved 820+ DSA problems; Knight at leetcode
 - Coding Ninjas College Topper; Rating 1871 (Specialist)
+- Solved 160+ questions on codeforces
 - Finalist — Adobe Express Add-on Hackathon
 - Ranked Top 3% in JEE
 - PM Yashasvi Scholar (National Scholarship Portal)
