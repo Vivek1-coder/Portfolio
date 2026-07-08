@@ -56,6 +56,7 @@ import {
   SiPlotly,
 } from "react-icons/si";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import LeetCode from "leetcode-query";
 
 const About2 = () => {
   const expertiseSkills = [
@@ -164,21 +165,21 @@ const About2 = () => {
 
   const stats = [
     {
-      number: "50+",
+      number: "90+",
       link: "https://github.com/Vivek1-coder",
       label: "Repos Created",
       icon: <FolderGit2 className="w-8 h-8 mb-3 text-cyan-500" />, // lucide-react
       color: "from-cyan-500 to-blue-500",
     },
     {
-      number: "270+",
+      number: "900+",
       link: "https://github.com/Vivek1-coder",
-      label: "Commits in 2025",
+      label: "Commits in 2025-2026",
       icon: <GitCommit className="w-8 h-8 mb-3 text-fuchsia-500" />, // lucide-react
       color: "from-violet-500 to-fuchsia-500",
     },
     {
-      number: "500+",
+      number: "800+",
       link: "https://leetcode.com/u/vivek1coder/",
       label: "LeetCode Questions",
       icon: <FileCode2 className="w-8 h-8 mb-3 text-indigo-500" />, // lucide-react
@@ -214,16 +215,21 @@ const About2 = () => {
     cfContests: 0,
     cfRank: "Loading...",
   });
-  const [leetcodeDetails, setLeetcodeDetails] = useState({});
+  const [leetcodeDetails, setLeetcodeDetails] = useState({
+    rating: 1850,
+    contests: 30,
+    totalSolved: 820,
+    rank: "Knight",
+  });
 
   useEffect(() => {
     const fetchCodeForces = async () => {
       try {
         const response = await fetch(
-          "https://codeforces.com/api/user.rating?handle=Vivek1-coder"
+          "https://codeforces.com/api/user.rating?handle=Vivek1-coder",
         );
         const response2 = await fetch(
-          "https://codeforces.com/api/user.info?handles=Vivek1-coder&checkHistoricHandles=false"
+          "https://codeforces.com/api/user.info?handles=Vivek1-coder&checkHistoricHandles=false",
         );
 
         const ratingData = await response.json(); // contest history
@@ -241,28 +247,32 @@ const About2 = () => {
       }
     };
 
-    const fetchLeetcode = async () => {
-      try {
-        const response = await fetch(
-          "https://codeforces.com/api/user.rating?handle=Vivek1-coder"
-        );
-        const response2 = await fetch(
-          "https://codeforces.com/api/user.info?handles=Vivek1-coder&checkHistoricHandles=true"
-        );
+   const fetchLeetcode = async () => {
+  try {
+    const [profileRes, solvedRes, contestRes] = await Promise.all([
+      fetch("https://alfa-leetcode-api.onrender.com/vivek1coder"),
+      fetch("https://alfa-leetcode-api.onrender.com/vivek1coder/solved"),
+      fetch("https://alfa-leetcode-api.onrender.com/vivek1coder/contest"),
+    ]);
 
-        if (response.ok && response2.ok) {
-          setCodeForcesDetails({
-            cfRatings: response2.data.result.maxRating,
-            cfContests: response.data.length,
-            cfRank: response2.data.result.maxRank,
-          });
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
+    const profile = await profileRes.json();
+    const solved = await solvedRes.json();
+    const contest = await contestRes.json();
+
+    setLeetcodeDetails({
+      rating: Math.ceil(contest.contestRating) || 0,
+      contests: contest.contestAttend || 0,
+      totalSolved: solved.solvedProblem || solved.totalSolved || 0,
+      rank: profile.rank || "Knight",
+    });
+    console.log("contest",contest);
+  } catch (err) {
+    console.error(err);
+  }
+};
     console.log("codeforces", codeforcesDetails);
     fetchCodeForces();
+    fetchLeetcode();
   }, []);
 
   return (
@@ -287,12 +297,12 @@ const About2 = () => {
         {/* Main Content */}
         <div className="grid lg:grid-cols-2  md:gap-16 justify-center items-center max-w-6xl md:mx-auto">
           {/* Left Column - Bio */}
-          
+
           <div
             className="space-y-2 md:space-y-8 animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
-        <div className="relative max-md:mx-6"> 
+            <div className="relative max-md:mx-6">
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur opacity-30 animate-glow-pulse"></div>
               <div className="relative bg-slate-900/70   backdrop-blur-sm border border-slate-700 rounded-xl px-2 py-6 md:p-8 text-center">
                 <div className="w-20 h-20 md:w-32 md:h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 p-1 animate-float">
@@ -300,7 +310,9 @@ const About2 = () => {
                     <User className="w-10 h-10 md:w-16 md:h-16 text-cyan-400" />
                   </div>
                 </div>
-                <h1 className="text-xl md:text-4xl font-bold mb-2 text-white">Vivek</h1>
+                <h1 className="text-xl md:text-4xl font-bold mb-2 text-white">
+                  Vivek
+                </h1>
                 <h3 className="text-md md:text-2xl font-bold mb-2 text-white">
                   (the.Developer)
                 </h3>
@@ -321,7 +333,7 @@ const About2 = () => {
               </div>
             </div>
 
-             <div className="md:hidden relative max-md:mx-4">
+            <div className="md:hidden relative max-md:mx-4">
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg blur opacity-25"></div>
               <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">
@@ -358,7 +370,9 @@ const About2 = () => {
                       style={{ animationDelay: `${0.1 * index}s` }}
                     >
                       <div className="w-1/3 text-center ">{skill.icon}</div>
-                      <div className="w-2/3 text-left max-md:text-sm">{skill.name}</div>
+                      <div className="w-2/3 text-left max-md:text-sm">
+                        {skill.name}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -373,7 +387,7 @@ const About2 = () => {
                   <Code className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                   Languages
                 </h3>
-                 <div className="grid grid-cols-2 gap-2 md:gap-4">
+                <div className="grid grid-cols-2 gap-2 md:gap-4">
                   {languageSkills.map((skill, index) => (
                     <div
                       key={skill.name}
@@ -381,17 +395,19 @@ const About2 = () => {
                       style={{ animationDelay: `${0.1 * index}s` }}
                     >
                       <div className="w-1/3 text-center">{skill.icon}</div>
-                      <div className="w-2/3 text-left max-md:text-sm">{skill.name}</div>
+                      <div className="w-2/3 text-left max-md:text-sm">
+                        {skill.name}
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-            
+
             <div className="relative max-md:mx-4">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
               <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-               <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
+                <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
                   <RiStackFill className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                   Frameworks/ Libraries
                 </h3>
@@ -403,7 +419,9 @@ const About2 = () => {
                       style={{ animationDelay: `${0.1 * index}s` }}
                     >
                       <div className="w-1/3 text-center">{skill.icon}</div>
-                      <div className="w-2/3 text-left max-md:text-sm">{skill.name}</div>
+                      <div className="w-2/3 text-left max-md:text-sm">
+                        {skill.name}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -412,8 +430,8 @@ const About2 = () => {
             <div className="relative max-md:mx-4">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25"></div>
               <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-                 <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
-                  <MdDevices className="w-5 h-5 md:w-6 md:h-6 mr-3"  />
+                <h3 className="text-lg md:text-2xl font-bold mb-6 text-purple-400 flex items-center">
+                  <MdDevices className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                   Operating Systems
                 </h3>
                 <div className="grid grid-cols-2 gap-2 md:gap-4">
@@ -425,7 +443,9 @@ const About2 = () => {
                     >
                       {" "}
                       <div className="w-1/3 text-center">{skill.icon}</div>
-                      <div className="w-2/3 text-left max-md:text-sm">{skill.name}</div>
+                      <div className="w-2/3 text-left max-md:text-sm">
+                        {skill.name}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -439,7 +459,7 @@ const About2 = () => {
             style={{ animationDelay: "0.4s" }}
           >
             {/* Profile Card */}
-             <div className="max-md:hidden relative max-md:mx-4">
+            <div className="max-md:hidden relative max-md:mx-4">
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg blur opacity-25"></div>
               <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">
@@ -517,10 +537,7 @@ const About2 = () => {
                   Leetcode
                 </h3>
 
-                <a
-                  href="https://leetcode.com/u/vivek1coder/"
-                  target="_blank"
-                >
+                <a href="https://leetcode.com/u/vivek1coder/" target="_blank">
                   <div
                     className="bg-slate-800/50 rounded-lg p-3 px-6 my-4 text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
                     style={{ animationDelay: `${3}s` }}
@@ -528,7 +545,7 @@ const About2 = () => {
                     <div className="w-1/3 text-center">
                       <MdStarRate className="inline-block w-5 h-5 mr-2" />
                     </div>
-                    <div className="w-2/3 text-left">1749 Ratings</div>
+                    <div className="w-2/3 text-left">{leetcodeDetails.rating} Ratings</div>
                   </div>
                 </a>
                 <div className="flex justify-between my-2 gap-6 mb-10">
@@ -539,7 +556,7 @@ const About2 = () => {
                     <div className="w-1/3 text-center">
                       <FaFlagCheckered className="inline-block w-5 h-5 mr-2" />
                     </div>
-                    <div className="w-2/3 text-left">17 Contests</div>
+                    <div className="w-2/3 text-left">{leetcodeDetails.contests} Contests</div>
                   </div>
                   <div
                     className="bg-slate-800/50 rounded-lg p-3 px-6 w-full text-center text-slate-300 hover:bg-slate-700/50 transition-colors duration-300 cursor-pointer flex items-center justify-between"
@@ -548,7 +565,7 @@ const About2 = () => {
                     <div className="w-1/3 text-center">
                       <FaMedal className="inline-block w-5 h-5 mr-2" />
                     </div>
-                    <div className="w-2/3 text-left">Top 10%</div>
+                    <div className="w-2/3 text-left">{leetcodeDetails.rank}</div>
                   </div>
                 </div>
 

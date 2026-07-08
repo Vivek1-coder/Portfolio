@@ -2,9 +2,11 @@ import React from 'react'
 import messaging from '../assets/images/messages.png'
 import xambuddy from '../assets/images/xambuddy.png'
 import huntxhunt from '../assets/images/huntxhunt.png'
+import shipguard from '../assets/images/shipguard.png'
 import proj_1 from '../assets/images/proj_1.jpeg'
 import proj_2 from '../assets/images/proj_2.jpg'
 import proj_3 from '../assets/images/proj_3.jpeg'
+import rotteneggs from '../assets/images/rotten-eggs.png'
 import proj_5 from '../assets/images/proj_5.jpg'
 import breathesafe from '../assets/images/breathesafe.jpg'
 import proj_9 from '../assets/images/proj_8.jpg'
@@ -19,11 +21,11 @@ import VantaFogBackground from '@/components/VantaFogBackground'
 const projects = [
   {
     image: xambuddy,
-    name: 'XAM BUDDY',
+    name: 'Coledge Mandal',
     description: 'A student-first platform focused on academics, collaboration, and discussions — all in one place.',
     skills: ['Nextjs','Node.js','MongoDb','NOSQL','TypeScript','Auth.js','Google OAuth','socket.io','Tailwind','Google APIs','Drive API','Youtube API','Shadcn','Git','Github','Vercel'],
     github: 'https://github.com/Vivek1-coder/XamBuddy',
-    live: 'https://xambuddy-ashy.vercel.app/',
+    live: 'https://coledgemandal.vercel.app/',
   },
   {
     image: huntxhunt,
@@ -34,12 +36,28 @@ const projects = [
     live: 'https://huntxhunt.innovisionnsut.com',
   },
   {
+    image: rotteneggs,
+    name: 'Rotten Eggs',
+    description: 'A website to get details and ai-summarized review of movie using imdbId',
+    skills: ['Reactjs','Node.js','Groq-Sdk','Youtube-API'],
+    github: 'https://github.com/Vivek1-coder/rfid-treasurehunt-event.git',
+    live: 'https://rotten-eggs.vercel.app/',
+  },
+  {
     image: proj_10,
     name: 'Fake News Detection',
     description: 'A Deep Learining based model trained on dataset of newspapers and articles to detect fake news',
     skills: ['Python','Numpy','Pandas','Seaborn','Matplotlib','Tensorflow','Keras','LSTM','Bi-LSTM','Deep Learning','Machine Learning','Kaggle','Streamlit'],
     github: 'https://github.com/Vivek1-coder/FakeNewsDetection',
     live: 'https://fake-news-detector-app-lstm.streamlit.app/',
+  },
+  {
+    image: shipguard,
+    name: 'Supply chain Delay Predictor',
+    description: 'An IOT project to predict the delays in supply chain using edge ai',
+    skills: ['Next.js','Node.js','MongoDb','NOSQL','TinyML','Google maps','ESP32', 'Neo6M GPS','DHT11','Arduino IDE','C/C++','JavaScript', 'Tailwind','Vercel'],
+    github: 'https://shipguard.vercel.app/',
+    live: 'https://shipguard.vercel.app/',
   },
   {
     image: breathesafe,
@@ -49,6 +67,7 @@ const projects = [
     github: 'https://github.com/Vivek1-coder/BreatheSafe',
     live: 'https://breathesafe.vercel.app/',
   },
+  
    {
     image: proj_11,
     name: 'Kavyapath',
